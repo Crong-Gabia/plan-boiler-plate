@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "verify": "npm run verify:spelling && npm run verify:mermaid && npm run verify:logical",
-    "verify:spelling": "./scripts/spellcheck-cspell.sh",
+    "verify:spelling": "node ./scripts/verify-spelling.mjs",
     "spellcheck:ko": "node ./scripts/spellcheck-ko.mjs",
     "verify:spelling:ko": "npm run spellcheck:ko",
     "verify:mermaid": "node ./scripts/verify-mermaid.mjs",
-    "verify:logical": "./scripts/verify-logical.sh",
+    "verify:logical": "node ./scripts/verify-logical.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

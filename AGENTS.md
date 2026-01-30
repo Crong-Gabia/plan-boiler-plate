@@ -14,6 +14,8 @@
 ### 1.1 리서치 내용(필수 섹션)
 
 1) 유사 제품/서비스 6개 이상 목록(링크 포함, 정책 패턴 포화 시 조기 종료 가능)
+   - **국내 서비스 우선**: 최소 2~3개는 국내(한국 사용자/정책 맥락) 서비스를 먼저 포함합니다.
+   - 국내 서비스에서 Training/Retention/Subprocessors/Admin controls/Permissioning 패턴이 포화되지 않으면 해외 서비스로 확장합니다.
 2) 각 서비스의 정책 패턴 요약(Privacy/AI terms 중심)
    - 학습(Training) 사용 여부
    - 보관/삭제(Retention/Deletion)
@@ -88,3 +90,6 @@ npm run verify
 - Antigravity OAuth: `opencode auth login` + `opencode-antigravity-auth` 플러그인 설정
 
 자세한 에이전트 역할/프롬프트 템플릿은 `product-description/rules/agents/`에 정의합니다.
+
+## Domestic references priority
+- Prioritize domestic (Korean) references and partners when evaluating policies and data handling.

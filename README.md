@@ -48,6 +48,14 @@ npm run spellcheck:ko
 ./scripts/setup.sh
 ```
 
+Windows (PowerShell):
+
+```powershell
+pwsh -File .\scripts\setup.ps1
+```
+
+> Note: PowerShell execution policy can block running scripts. If you see an execution policy error, review the script and follow Microsoft guidance for your environment.
+
 ## OpenCode Web UI (선택)
 
 ```bash
@@ -115,3 +123,8 @@ product-description/design/
 
 - 에이전트 규칙(필수): `AGENTS.md`
 - 에이전트별 지침: `product-description/rules/agents/README.md`
+
+## Examples
+
+Filled-in example documents live under `examples/**`.
+They are **not** part of the boilerplate SSoT. The boilerplate SSoT is `product-description/**`.

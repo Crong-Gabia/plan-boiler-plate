@@ -2,42 +2,36 @@
 
 State: `DRAFT_FLOW`
 
-Date: 2026-01-30
+Date: YYYY-MM-DD
 
 ## One-liner
 
-An internal meeting time coordination service that lets authenticated employees (required) and external guests (optional) quickly submit availability, reach a decision, and share/apply the final schedule.
+<Describe the product in one sentence.>
 
 ## Problem
 
-- Availability gathering is scattered across email/chat → high coordination cost.
-- Time zones and hybrid work make “when are you free?” harder.
-- External attendees introduce permission and data-boundary risks.
+- <Problem #1>
+- <Problem #2>
 
 ## Goals
 
-- Reduce back-and-forth for finding a meeting time.
-- Support internal users + external guests in a single flow.
-- Provide at least an `.ics` path to get the meeting into calendars.
+- <Goal #1>
+- <Goal #2>
 
 ## Non-goals (v1)
 
-- Meeting notes/agenda management.
-- Forced auto-booking as the default.
-- Full resource booking (rooms/equipment).
+- <Non-goal #1>
+- <Non-goal #2>
 
 ## Scope
 
-- Mixed participation: internal users + external guests (DECISION-0001)
-- Propose slots → collect votes → decide → share
+- <What’s in scope>
 
 ## Roles
 
-- Organizer (internal)
-- Internal participant
-- Guest participant (link/token)
-- Admin (tenant policy)
+- <Role #1>
+- <Role #2>
 
 ## Open questions
 
-- Calendar integration scope and internal auth approach (QUESTION-0001)
+- QUESTION-0001: <Open question>

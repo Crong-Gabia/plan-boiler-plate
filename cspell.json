@@ -4,7 +4,9 @@
   "ignorePaths": [
     "**/node_modules/**",
     "**/.idea/**",
-    "**/.spellcheck-venv/**"
+    "**/.spellcheck-venv/**",
+    "**/.tmp/**",
+    "**/examples/**"
   ],
   "patterns": [
     {

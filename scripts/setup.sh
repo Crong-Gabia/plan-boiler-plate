@@ -13,13 +13,13 @@ need_cmd() {
 
 root_dir="$(cd "$(dirname "$0")/.." && pwd)"
 
-echo "[1/5] Installing OpenCode (if missing)"
+echo "[1/4] Installing OpenCode (if missing)"
 "$root_dir/scripts/install-opencode.sh" "${OPENCODE_INSTALL_METHOD:-curl}"
 
-echo "[2/5] Ensuring Node/npm (for repo verification tooling)"
+echo "[2/4] Ensuring Node/npm (for repo verification tooling)"
 "$root_dir/scripts/install-node.sh"
 
-echo "[3/5] Installing repo devDependencies (cspell/mermaid)"
+echo "[3/4] Installing repo devDependencies (cspell/mermaid)"
 if ! need_cmd npm; then
   echo "npm not found even after Node install." >&2
   exit 1
@@ -27,7 +27,7 @@ fi
 cd "$root_dir"
 npm install
 
-echo "[4/5] Installing Oh My OpenCode plugin (optional)"
+echo "[4/4] Installing Oh My OpenCode plugin (optional)"
 claude="${OHMY_CLAUDE:-}"
 chatgpt="${OHMY_CHATGPT:-}"
 gemini="${OHMY_GEMINI:-}"
@@ -39,7 +39,7 @@ else
   echo "  OHMY_CLAUDE=<yes|no|max20> OHMY_CHATGPT=<yes|no> OHMY_GEMINI=<yes|no> ./scripts/setup.sh"
 fi
 
-echo "[5/5] Running verification"
+echo "Running verification"
 npm run verify
 
 echo "Done. Next:" 
