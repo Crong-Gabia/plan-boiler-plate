@@ -28,6 +28,20 @@ product-description/
    - (옵션) 논리 검증(opencode run)
    을 수행합니다.
 
+### (선택) 한국어 맞춤법 검사(온라인 의존)
+
+기본 `npm run verify`에는 포함되지 않습니다. (비개발자/CI 환경에서 외부 서비스 의존으로 인해 실패할 수 있으므로)
+
+원할 때만 아래를 실행하세요:
+
+```bash
+npm run spellcheck:ko
+```
+
+- `hanfix`(Daum 맞춤법 검사기 기반)를 사용하며 **인터넷 연결이 필요**합니다.
+- 검사 대상은 기본적으로 `product-description/**` 아래의 Markdown 입니다.
+- 외부 서비스 이용 약관/레이트리밋에 유의하세요.
+
 ## 빠른 시작(원샷)
 
 ```bash
@@ -38,6 +52,22 @@ product-description/
 
 ```bash
 opencode web
+```
+
+사내 프록시 환경에서 팀 공통으로 쓰기 위해 `opweb` 래퍼 스크립트를 제공합니다.
+
+```bash
+./scripts/opweb.sh
+```
+
+alias로 등록(선택):
+
+```bash
+./scripts/install-opweb-alias.sh
+source ~/.zshrc   # 또는 ~/.bashrc
+
+# 이후
+opweb
 ```
 
 포트 고정:
