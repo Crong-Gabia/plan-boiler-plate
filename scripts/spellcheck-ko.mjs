@@ -118,16 +118,33 @@ async function* iterMdFiles(rootDir) {
   }
 }
 
+async function resolveHanfixCommand() {
+  // Prefer local install (node_modules/.bin), fallback to PATH.
+  const local = path.join(
+    process.cwd(),
+    'node_modules',
+    '.bin',
+    process.platform === 'win32' ? 'hanfix.cmd' : 'hanfix'
+  )
+  try {
+    await fs.access(local)
+    return local
+  } catch {
+    return 'hanfix'
+  }
+}
+
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms))
 }
 
 async function runHanfix(text, { retries }) {
+  const cmd = await resolveHanfixCommand()
   const args = ['--data', text, '--include-corrected']
 
   for (let attempt = 0; attempt <= retries; attempt++) {
     const out = await new Promise((resolve) => {
-      const child = spawn('hanfix', args, { stdio: ['ignore', 'pipe', 'pipe'] })
+      const child = spawn(cmd, args, { stdio: ['ignore', 'pipe', 'pipe'] })
 
       let stdout = ''
       let stderr = ''
