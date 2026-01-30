@@ -1,0 +1,1 @@
+py-hanspell>=0.1.1

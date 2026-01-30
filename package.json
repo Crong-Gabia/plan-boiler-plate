@@ -1,0 +1,22 @@
+{
+  "name": "plan-boiler-plate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "verify": "npm run verify:spelling && npm run verify:mermaid && npm run verify:logical",
+    "verify:spelling": "./scripts/spellcheck-cspell.sh && ./scripts/spellcheck-ko.sh",
+    "verify:spelling:ko": "VERIFY_KO_SPELLCHECK_STRICT=1 ./scripts/spellcheck-ko.sh",
+    "verify:mermaid": "node ./scripts/verify-mermaid.mjs",
+    "verify:logical": "./scripts/verify-logical.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^11.12.0",
+    "cspell": "^8.17.5"
+  }
+}

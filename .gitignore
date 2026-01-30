@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+
+# Editors
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python venv (korean spellcheck)
+.spellcheck-venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Mermaid validation temp outputs
+.tmp/
+
+# Example-only docs (will be removed)
+기획서/

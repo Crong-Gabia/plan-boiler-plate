@@ -1,0 +1,37 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/.idea/**",
+    "**/.spellcheck-venv/**"
+  ],
+  "patterns": [
+    {
+      "name": "fenced-code-blocks",
+      "pattern": "/```[\\s\\S]*?```/g"
+    },
+    {
+      "name": "inline-code",
+      "pattern": "/`[^`]*`/g"
+    },
+    {
+      "name": "korean",
+      "pattern": "/[가-힣]+/g"
+    }
+  ],
+  "ignoreRegExpList": [
+    "fenced-code-blocks",
+    "inline-code",
+    "korean"
+  ],
+  "words": [
+    "opencode",
+    "OhMyOpenCode",
+    "Subprocessor",
+    "Subprocessors",
+    "subprocessor",
+    "Permissioning",
+    "Antigravity"
+  ]
+}
