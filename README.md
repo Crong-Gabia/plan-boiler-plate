@@ -128,3 +128,35 @@ product-description/design/
 
 Filled-in example documents live under `examples/**`.
 They are **not** part of the boilerplate SSoT. The boilerplate SSoT is `product-description/**`.
+
+## Minimal web chat (Next.js)
+
+This repo includes a minimal Next.js app so you can wrap a chat UI and deploy quickly.
+
+### Local run
+
+1) Install dependencies:
+
+```bash
+npm install
+```
+
+2) Set environment variables:
+
+```bash
+export OPENAI_API_KEY="..."
+export OPENAI_MODEL="gpt-4o-mini"   # optional
+export OPENAI_BASE_URL="https://api.openai.com"  # optional
+```
+
+3) Run:
+
+```bash
+npm run dev
+```
+
+Then open http://localhost:3000
+
+### Deploy
+
+- Vercel: set the same env vars in the project settings and deploy.
